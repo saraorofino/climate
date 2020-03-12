@@ -1,0 +1,46 @@
+---
+title: "generate_data"
+author: "Sara Orofino"
+date: "3/12/2020"
+output: html_document
+---
+
+```{r setup}
+library(tidyverse)
+library(here)
+library(devtools)
+```
+
+##Generate Function Data
+
+
+###extent
+Want to include in the package some existing data from NOAA and the National Snow and Ice Data Center. These data references are also linked in the function documentation.    
+
+Data from: ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/monthly/data/  
+Userguide: https://nsidc.org/data/G02135/versions/3  
+
+Available on a monthly basis. I will include data for two months as sample data. Sea Ice extent in the Northern Hemisphere reaches a maximum in March and a minimum in September, so these are the two that I will include for example data.  
+```{r extent-data}
+#read in data from the downloaded data folder 
+#using here() brings the directory to whereever you've locally cloned the climate repo
+march_extent <- read_csv(file = file.path(here(), "/downloaded_data/N_03_extent_v3.0.csv"))
+sept_extent <- read_csv(file = file.path(here(), "/downloaded_data/N_03_extent_v3.0.csv"))
+
+#store the data to the package:
+use_data(march_extent, pkg=climate, overwrite = TRUE)
+use_data(sept_extent, pkg=climate, overwrite =  TRUE)
+```
+
+###si_extremes  
+Also want to include in the package some monthly data on sea ice extents for multiple years. These data come from the same data source but I combined all of the months into a single data frame.    
+
+```{r extremes-data}
+#read in data from the downloaded data folder 
+#using here() brings the directory to whereever you've locally cloned the climate repo
+extent_data <- read_csv(file = file.path(here(), "/downloaded_data/N_seaice_extent_v3.0.csv"))
+
+#store the data to the package:
+use_data(extent_data, pkg=climate, overwrite=TRUE)
+```
+
