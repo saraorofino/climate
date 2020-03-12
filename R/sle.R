@@ -6,7 +6,7 @@
 #'
 #' @return the sea level rise equivalent (in mm) caused by the melting of the input volume of sea ice (ice_vol)
 #'
-#' @example
+#' @examples
 #' sle(ice_vol = 500, above = 0.6)
 
 

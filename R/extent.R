@@ -11,7 +11,7 @@
 #' \item{plt}{A plot of sea ice extent over all the years in the ext data frame, null if showplot=F}
 #' }
 #'
-#' @example
+#' @examples
 #' Generate some input data:
 #' input <- data.frame(year = seq(2000,2019,1), extents = runif(20,3,7))
 #' extent(year1 = 2005, year2 = 2010, ext = input, showplot=TRUE)

@@ -14,7 +14,7 @@
 #' \item{si_table}{Table displaying the above output values, null if showtable=F}
 #' }
 #'
-#' @example
+#' @examples
 #' Generate some input data:
 #' input <- data.frame(year = rep(1990, 12), mo = seq(1,12,1), extent = runif(12,2,15))
 #' si_extremes(si = input, showtable = T)
