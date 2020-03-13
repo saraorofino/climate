@@ -3,6 +3,9 @@
 #' Sea ice extent (in square kilometers) each month from 1979-2019
 #'
 #'@format a data frame of 494 rows and 6 columns
+#'
+#'@source ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/monthly/data/
+#'
 #'\describe{
 #'\item{year}{Year in four digit format}
 #'\item{mo}{Month in numeric format 1-12}
