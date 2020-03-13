@@ -1,0 +1,52 @@
+---
+title: "apply_climate"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Put the title of your vignette here}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+##Package Overview
+
+This climate package contains functions to calculate different trends in sea ice extent and possible sea level rise equivalents of melting a given volume of sea ice.  
+
+
+##Examples
+
+###sle()
+
+The sle function calculates sea level rise equivalent (mm) for melting any given volume (cubed kilometer) of sea ice  
+For more information see help(sle)  
+
+```{r sle-example}
+library(climate)
+
+sle(ice_vol = 500, above = 0.6)
+```
+
+###extent
+
+The extent function is used to calculate the rate of change in sea ice extent between two years  
+For more information see help(extent)  
+
+```{r extent-example}
+
+data("march_extent")
+data("sept_extent")
+
+extent(year1 = 1995, year2 = 2010, ext = sept_extent, showplot = T)
+```
+
+###si_extremes
+
+The si_extremes function is used to calculate the maximum and minimum sea ice extent and the corresponding year and month  
+For more information see help(si_extremes)  
+
+```{r si_extremes-example}
+
+data("extent_data")
+
+si_extremes(si = extent_data, showtable = T)
+```
+
