@@ -11,7 +11,7 @@ extent(year1, year2, ext, showplot = FALSE)
 
 \item{year2}{the later year of interest, four digit format (i.e. 1990)}
 
-\item{ext}{data frame with two columns: year, extent (in millions of square kilometers)}
+\item{ext}{data frame with at least two columns: year, extent (in millions of square kilometers)}
 
 \item{showplot}{optional to display the sea ice extent for all the years in the ext data frame, default showplot=F}
 }
