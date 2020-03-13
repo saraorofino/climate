@@ -30,7 +30,7 @@ sle(ice_vol = 500, above = 0.6)
 The extent function is used to calculate the rate of change in sea ice extent between two years  
 For more information see help(extent)  
 
-```{r extent-example}
+```{r extent-example, message=FALSE, warning=FALSE}
 
 data("march_extent")
 data("sept_extent")
@@ -43,10 +43,10 @@ extent(year1 = 1995, year2 = 2010, ext = sept_extent, showplot = T)
 The si_extremes function is used to calculate the maximum and minimum sea ice extent and the corresponding year and month  
 For more information see help(si_extremes)  
 
-```{r si_extremes-example}
+```{r si_extremes-example, message=FALSE}
 
 data("extent_data")
 
-si_extremes(si = extent_data, showtable = T)
+si_extremes(si = extent_data, showtable = F)
 ```
 
