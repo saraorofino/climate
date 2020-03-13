@@ -25,7 +25,7 @@ Available on a monthly basis. I will include data for two months as sample data.
 #read in data from the downloaded data folder 
 #using here() brings the directory to whereever you've locally cloned the climate repo
 march_extent <- read_csv(file = file.path(here(), "/downloaded_data/N_03_extent_v3.0.csv"))
-sept_extent <- read_csv(file = file.path(here(), "/downloaded_data/N_03_extent_v3.0.csv"))
+sept_extent <- read_csv(file = file.path(here(), "/downloaded_data/N_09_extent_v3.0.csv"))
 
 #store the data to the package:
 use_data(march_extent, pkg=climate, overwrite = TRUE)
