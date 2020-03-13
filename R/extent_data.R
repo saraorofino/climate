@@ -11,8 +11,8 @@
 #'\item{mo}{Month in numeric format 1-12}
 #'\item{data-type}{Goddard: Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS Passive Microwave Data}
 #'\item{region}{Hemisphere N = Northern}
-#'\item{extent}{Sea ice extent in millions of square kilometers}
-#'\item{area}{Sea ice area in millions of square kilometers}
+#'\item{extent}{Sea ice extent in millions of square kilometers; no data values -9999}
+#'\item{area}{Sea ice area in millions of square kilometers; no data values -9999}
 #'}
 #'
 'extent_data'
