@@ -48,5 +48,6 @@ For more information see help(si_extremes)
 data("extent_data")
 
 si_extremes(si = extent_data, showtable = F)
+
 ```
 
