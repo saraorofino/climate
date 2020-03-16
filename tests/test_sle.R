@@ -1,5 +1,5 @@
 
-test_that("sle_works", {
+test_that("sle_works" , {
 
   #Create some test data with a series of ice volumes and percents:
   ice_data <- data.frame(volume = c(500,200,600, 350, 465), #assign 5 volumes
@@ -14,7 +14,7 @@ test_that("sle_works", {
   expect_equal(sle(ice_vol = ice_data$volume[1:2], above = ice_data$percent_above[2]),
                "Provide a single numeric value for ice_vol, not a vector")
 
-  #For a volume of 500 with 60% above water, the sle should be 0.7601161
-  expect_equal(sle(ice_vol = ice_data$volume[1], above = ice_data$percent_above[3]), 0.7601161)
+  #For a volume of 500 with 60% above water, the sle rounded to 2 digits should be 0.76
+  expect_equal(round(sle(ice_vol = ice_data$volume[1], above = ice_data$percent_above[3]),2), 0.76)
 
-  })
+})
