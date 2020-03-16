@@ -36,7 +36,7 @@ si_extremes <- function(si, showtable = FALSE){
 
   #use only positive extent values
   si_pos <- si %>%
-    filter(extent > 0)
+    dplyr::filter(extent > 0)
 
   #find the maximum sea ice extent wth corresponding year and month
   max_si <- max(si_pos$extent)
